@@ -6,6 +6,7 @@ import CreatePage from 'components/CreatePage'
 import DraftsPage from 'components/DraftsPage'
 import NotFoundPage from 'components/NotFoundPage'
 import Menu from 'components/Menu'
+import Login from 'components/Login'
 
 Vue.use(Router)
 
@@ -20,6 +21,14 @@ export default new Router({
     },*/
     {
       path: '/',
+      name: 'Login',
+      component: Login,
+      meta: {
+        title: 'Login'
+      }
+    },
+    {
+      path: '/menu',
       name: 'Menu',
       component: Menu,
       meta: {

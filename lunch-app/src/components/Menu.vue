@@ -3,7 +3,7 @@
         <v-layout row wrap>
             
             <v-flex>
-                <v-tabs fixed-tabs color = "transparent">
+                <v-tabs fixed-tabs color = "transparent" slider-color = "yellow darken-3">
                     <v-tab>Monday</v-tab>
                     <v-tab>Tuesday</v-tab>
                     <v-tab>Wednesday</v-tab>
@@ -11,16 +11,21 @@
                     <v-tab>Firday</v-tab>
                 </v-tabs>
                 <v-card class = "mt-5">
-                    <v-card-title primary-title> <h3 class = "blue--text">Order</h3></v-card-title>
+                    <v-card-title primary-title> <h2 class = "blue--text">Order</h2></v-card-title>
                     <v-form title = 'Menu'>
                         <v-flex>
-                            <v-select class = "mt-2" label = 'Protein' v-model="cur_protein" :items ="protein" style = "width: 50%; margin-left: 22%"></v-select>
+                            <v-select class = "mt-2" label = 'Protein' v-model="cur_protein" :items ="protein" style = "width: 50%; margin-left: 22%" color = "blue"></v-select>
                         </v-flex>
                         <v-flex>
-                            <v-select class = "mt-2" label = 'Carb' v-model="cur_carb" :items ="carb" style = "width: 50%; margin-left: 22%"></v-select>
+                            <v-select class = "mt-2" label = 'Carb' v-model="cur_carb" :items ="carb" style = "width: 50%; margin-left: 22%" color = "blue"></v-select>
                         </v-flex>
                         <v-flex>
-                            <v-select class = "mt-2 pb-5" label = 'Side' v-model="cur_side" :items ="sides" style = "width: 50%; margin-left: 22%"></v-select>
+                            <v-select class = "mt-2 mb-5" label = 'Side' v-model="cur_side" :items ="sides" style = "width: 50%; margin-left: 22%" color = "blue"></v-select>
+                        </v-flex>
+                        <v-flex>
+                            <v-btn class = "yellow darken-3 mb-5" style = "margin-left: 40%">
+                                Place Order
+                            </v-btn>
                         </v-flex>
                     </v-form>
                 </v-card>

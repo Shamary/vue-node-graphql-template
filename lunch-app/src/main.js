@@ -8,6 +8,7 @@ import { WebSocketLink } from 'apollo-link-ws'
 import { ApolloLink, split } from 'apollo-link'
 import { getMainDefinition } from 'apollo-utilities'
 import vueTitle from 'vue-page-title'
+import VeeValidate from 'vee-validate'
 import VueApollo from 'vue-apollo'
 import router from './router'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
@@ -17,6 +18,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.config.productionTip = false
 
 Vue.use(vueTitle, {router})
+Vue.use(VeeValidate)
 
 const httpLink = new HttpLink({ uri: 'http://localhost:4000/' })
 
